@@ -1,0 +1,442 @@
+<html>
+  <head>
+    <meta charset="UTF-8"><title>CB Consultores</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+        .centrado {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            margin: 50px;
+            background-color: #637a6b; /* Color de fondo del contenedor */
+            padding: 15px; /* Espacio interno dentro del contenedor */
+            border-radius: 25px; /* Borde redondeado para el contenedor */
+        }
+        header {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Estilos para el div del logo */
+        #logo {
+            font-family: Arial, sans-serif;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        /* Estilos para el menú de navegación */
+        #menu {
+            font-family: Arial, sans-serif;
+            display: inline-block;
+        }
+
+        #menu ul {
+            font-family: Arial, sans-serif;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #menu ul li {
+            font-family: Arial, sans-serif;
+            display: inline;
+            margin-right: 20px;
+        }
+
+        #menu ul li a {
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            color: #fff;
+        }        
+        .hero {
+            font-family: Arial, sans-serif;
+            background-image: url('imagen_de_fondo.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* Estilos para el título en h1 */
+        .hero h1 {
+            font-family: Arial, sans-serif;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        /* Estilos para la descripción en p */
+        .hero p {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        .hero {
+            font-family: Arial, sans-serif;
+            background-image: url('imagen_de_fondo.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-family: Arial, sans-serif;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        /* Estilos para la llamada a la acción (CTA) en la sección Hero */
+        .cta-button {
+            font-family: Arial, sans-serif;
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2583ba; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+        }
+        .panel-section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Estilos para cada panel individual */
+        .panel {
+            font-family: Arial, sans-serif;
+            width: 27%; /* Ajusta el ancho de cada panel según tus necesidades */
+            background-color: #097ce7;
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera alrededor de los paneles */
+            transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+        }
+
+        /* Estilos para la imagen en cada panel */
+        .panel img {
+            max-width: 20%;
+            height: auto;
+        }
+
+        /* Estilos para el título en cada panel */
+        .panel h4 {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        /* Estilos para la descripción en cada panel */
+        .panel p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Estilos para el botón en cada panel */
+        .panel button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .panel button:hover {
+            background-color: #0966a3; /* Cambia el color al pasar el mouse sobre el botón */
+        }
+
+        .panel:hover {
+            background-color: #00c3ff;
+        }
+
+        .Insta img{
+            width: 90px;
+            height: 90px;
+            transition: transform 0.2s, filter 0.2s;
+            cursor: pointer;
+        }
+
+        .Insta img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.9);
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con una opacidad del 50% */
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            z-index: 10; /* Coloca el encabezado por encima de la imagen de fondo */
+        }
+        #logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #menu {
+            display: inline-block;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #menu ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        /* Estilos generales del footer */
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            background-color: #72abff; /* opcional, cambia a gusto */
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+        }
+
+        .footer-social-buttons {
+            flex: 0.8; /* un poco más angosto */
+        }
+
+        .footer-social-buttons img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+
+        .footer-social-buttons div {
+            display: inline-block;
+        }
+
+        .social-icon {
+            transition: filter 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            filter: brightness(1.4); /* Ilumina */
+            transform: scale(1.05); /* Agranda un poquito */
+        }
+        html, body {
+          overflow-x: hidden;
+          max-width: 100%;
+        }
+        @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 10px; /* opcional, ajusta espacio entre ítems */
+        }
+
+        .container {
+          flex-direction: column;
+          margin: 20px 10px; /* reduce márgenes en móvil */
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col" style='font-family: sans-serif; overflow-x: hidden;'>
+  <div class="flex-grow">
+        <div class="@container">
+          <div class="@[480px]:p-4">
+            <div
+              class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+              style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7iCNORiM_o3KSv5Qsaz9Z-aS3K7k9028xsucCV9zc5w63FELKCnQmgxdzcxTIc9Yn0AFlTxVtjd67jFEoLDLLKDaCV3BzL-6K-Qcq2WKMRkcTKLd-eq4Zy3ef-wrRE1xOM86uf2rO7TGbGKA-ilYVEGn3LejumlP16sakQZ-UgSd94aMnE1yEeYjIKRd0WwsRtetryd5ttSx3vT66xM2C1PscV_J0HasovBcxsZYYgt03LTiIpKtLhHgX_42UEhaqTNJxprLNSWk");'
+            >
+              <div class="flex flex-col gap-2 text-left">
+                <h1
+                  class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                >
+                  C&B Consultores legales, contables e Informaticos
+                </h1>
+                <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                  Brindamos servicios legales integrales en diversos dominios, garantizando que sus intereses estén protegidos y sus objetivos se alcancen.
+                </h2>
+              </div>
+            <a href="https://web.whatsapp.com/send?phone=56994441258&text=Hola%2C%20quiero%20iniciar%20un%20caso" target="_blank" rel="noopener">
+              <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#b8cee4] text-[#131416] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                <span class="truncate">Iniciemos un Caso</span>
+              </button>
+            </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-10 px-4 py-10 @container">
+          <div class="flex flex-col gap-4">
+            <h1
+              class="text-[#131416] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+            >
+              Nuestros Servicios
+            </h1>
+            <p class="text-[#131416] text-base font-normal leading-normal max-w-[720px]">
+              Explore nuestra amplia gama de servicios legales y financieros diseñados para satisfacer sus necesidades específicas.
+            </p>
+          </div>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
+            <div class="flex flex-col gap-3 pb-3">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                style='background-image: url("Imagenes/acuerdo.svg");'
+              ></div>
+              <div>
+                <p class="text-[#131416] text-base font-medium leading-normal">Derecho Civil</p>
+                <p class="text-[#6b7580] text-sm font-normal leading-normal">Experiencia en disputas contractuales, derechos de propiedad y reclamos por lesiones personales.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                style='background-image: url("Imagenes/Derecho penal.svg");'
+              ></div>
+              <div>
+                <p class="text-[#131416] text-base font-medium leading-normal">Derecho Penal</p>
+                <p class="text-[#6b7580] text-sm font-normal leading-normal">Defensa y persecución en causas penales, garantizando un proceso judicial justo.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                style='background-image: url("Imagenes/Familia2.svg");'
+              ></div>
+              <div>
+                <p class="text-[#131416] text-base font-medium leading-normal">Derecho de Familia</p>
+                <p class="text-[#6b7580] text-sm font-normal leading-normal">Orientación en materia de divorcio, custodia de menores y adopción.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                style='background-image: url("Imagenes/Laboral.svg");'
+              ></div>
+              <div>
+                <p class="text-[#131416] text-base font-medium leading-normal">Derecho Laboral</p>
+                <p class="text-[#6b7580] text-sm font-normal leading-normal">Apoyo en contratos de trabajo, conflictos y normativa laboral.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                style='background-image: url("Imagenes/Migracion.svg");'
+              ></div>
+              <div>
+                <p class="text-[#131416] text-base font-medium leading-normal">Derecho Migratorio</p>
+                <p class="text-[#6b7580] text-sm font-normal leading-normal">Asistencia con solicitudes de visa, permisos de residencia y cumplimiento migratorio.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                style='background-image: url("Imagenes/Contabilidad.svg");'
+              ></div>
+              <div>
+                <p class="text-[#131416] text-base font-medium leading-normal">Servicios Contables</p>
+                <p class="text-[#6b7580] text-sm font-normal leading-normal">Servicios integrales de auditoría financiera y contabilidad para empresas y particulares.</p>
+              </div>
+            </div>         
+          </div>
+        </div>        
+      </div>
+      <div><div class="h-5 bg-white"></div></div>
+    </div>
+    <section>
+        <footer>
+        <!-- Primera columna con el logo -->
+        <div class="footer-column footer-logo">
+            <img src="Imagenes/Logo.png" alt="Logo de la Empresa">
+        </div>
+  
+        <!-- Segunda columna con la dirección -->
+        <div class="footer-column footer-address">
+            <h1><strong>Dirección</strong></h1>
+            <br>
+            <ul>
+                <li>San Francisco 207, 2° piso</li>
+                <li>Comuna y ciudad Santiago de Chile</li>
+            </ul>
+        </div>
+  
+        <!-- Tercera columna con botones de redes sociales -->
+        <div class="footer-column footer-social-buttons">
+            <h1><strong>Redes Sociales</strong></h1>
+            <br>
+            <div>
+                <a href="https://instagram.com/" target="_blank">
+                    <img class="social-icon" src="Imagenes/Instagram.svg" alt="Insta">
+                </a>
+              </div>
+            <div>
+                <a href="https://Tiktok.com/" target="_blank">
+                    <img class="social-icon" src="Imagenes/Tiktok.svg" alt="Tiktok">
+                </a>
+            </div>
+            <div>
+                <a href="https://facebook.com/" target="_blank">
+                    <img class="social-icon" src="Imagenes/facebook.svg" alt="Fb">                    
+                </a>
+            </div>
+        </div>
+  
+        <!-- Cuarta columna con el número telefónico -->
+        <div class="footer-column footer-phone">
+            <h1><strong>Contacto</strong></h1>
+            <p>tel: +56 9 9444 1258</p>
+            <a href="https://web.whatsapp.com/send?phone=56994441258&text=Hola%2C%20quiero%20iniciar%20un%20caso" target="_blank" style="display: inline-block;">
+              <img src="Imagenes/whatsapp.svg" alt="WhatsApp" class="social-icon" style="width: 36px; height: auto;"/>
+            </a>
+            <h1><strong>E-mail</strong></h1>
+            <p>CyBConsultoresLegales@hotmail.com</p>
+        </div>
+    </footer>
+    </section>
+  </body>
+</html>
